@@ -18,8 +18,8 @@ static const int showbar = 1;     /* 0 means no bar */
 static const int topbar = 1;      /* 0 means bottom bar */
 static const int user_bh =
     10; /* 2 is the default spacing around the bar's font */
-static const char *fonts[] = {"cozette:size=10"};
-static const char dmenufont[] = "cozette:size=10";
+static const char *fonts[] = {"CozetteVector:size=12"};
+static const char dmenufont[] = "CozetteVector:size=12";
 static const char col_gray1[] = "#282828";
 static const char col_gray2[] = "#504945";
 static const char col_gray3[] = "#bdae93";
