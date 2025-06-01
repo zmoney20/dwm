@@ -97,6 +97,8 @@ static const char *passcmd[] = {"passmenu", NULL};
 static const char *rofipasscmd[] = {"rofi-pass", NULL};
 /* dmenu_sys - view running processes and choose to kill a certain pid */
 static const char *dmenusyscmd[] = {"dmenu_sys", NULL};
+/* send current date and time via notify-send to dunst */
+static const char *whattimeisitcmd[] = {"whattimeisit", NULL};
 
 #include "movestack.c"
 static const Key keys[] = {
@@ -107,6 +109,7 @@ static const Key keys[] = {
     {MODKEY, XK_p, spawn, {.v = passcmd}},
     {MODKEY, XK_r, spawn, {.v = rofipasscmd}},
     {MODKEY, XK_s, spawn, {.v = dmenusyscmd}},
+    {MODKEY, XK_c, spawn, {.v = whattimeisitcmd}}, /* [c]lock */
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
