@@ -95,6 +95,8 @@ static const char *termcmd[] = {"wezterm", NULL};
 static const char *browsercmd[] = {"qutebrowser", NULL};
 static const char *passcmd[] = {"passmenu", NULL};
 static const char *rofipasscmd[] = {"rofi-pass", NULL};
+/* dmenu_sys - view running processes and choose to kill a certain pid */
+static const char *dmenusyscmd[] = {"dmenu_sys", NULL};
 
 #include "movestack.c"
 static const Key keys[] = {
@@ -104,6 +106,7 @@ static const Key keys[] = {
     {MODKEY, XK_e, spawn, {.v = browsercmd}},
     {MODKEY, XK_p, spawn, {.v = passcmd}},
     {MODKEY, XK_r, spawn, {.v = rofipasscmd}},
+    {MODKEY, XK_s, spawn, {.v = dmenusyscmd}},
     {MODKEY, XK_b, togglebar, {0}},
     {MODKEY, XK_j, focusstack, {.i = +1}},
     {MODKEY, XK_k, focusstack, {.i = -1}},
