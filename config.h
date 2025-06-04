@@ -10,14 +10,14 @@ static const int user_bh =
     10; /* 2 is the default spacing around the bar's font */
 static const char *fonts[] = {"cozette:size=16"};
 static const char dmenufont[] = "cozette:size=16";
-static const char col_gray1[] = "#2f383e";  // Background
-static const char col_gray2[] = "#4b565c";  // Inactive window border
-static const char col_gray3[] = "#d3c6aa";  // Foreground text
-static const char col_gray4[] = "#fdf6e3";  // Selected text
-static const char col_cyan[] = "#7fbbb3";   // Accent (e.g., title)
-static const char col_lightcyan[] = "#a7c080";
+static const char col_gray1[] = "#272e33";
+static const char col_gray2[] = "#3a454a";
+static const char col_gray3[] = "#d3c6aa";
+static const char col_gray4[] = "#e0dcc7";
+static const char col_cyan[] = "#7fbbb3";
+static const char col_lightcyan[] = "#83c092";
 static const char col_orange[] = "#e69875";
-static const char col_red_brown[] = "#a35e4e"; // red brown (good for dmenu)
+static const char col_red_brown[] = "#a35e4e";
 
 static const char *colors[][3] = {
     /*               fg         bg         border   */
