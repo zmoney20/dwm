@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx = 1; /* border pixel of windows */
+static const unsigned int borderpx = 2; /* border pixel of windows */
 static const unsigned int gappx = 6;    /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
@@ -10,24 +10,38 @@ static const int user_bh =
     10; /* 2 is the default spacing around the bar's font */
 static const char *fonts[] = {"cozette:size=16"};
 static const char dmenufont[] = "cozette:size=16";
-static const char col_gray1[] = "#272e33";
-static const char col_gray2[] = "#3a454a";
-static const char col_gray3[] = "#d3c6aa";
-static const char col_gray4[] = "#e0dcc7";
-static const char col_cyan[] = "#7fbbb3";
-static const char col_lightcyan[] = "#83c092";
-static const char col_orange[] = "#e69875";
-static const char col_red_brown[] = "#a35e4e";
+static const char col_gray1[] = "#282828";
+static const char col_gray2[] = "#504945";
+static const char col_gray3[] = "#bdae93";
+static const char col_gray4[] = "#fbf1c7";
+static const char col_cyan[] = "#458588";
+static const char col_lightcyan[] = "#83a598";
+static const char col_orange[] = "#d65d0e";
+// static const char col_red_brown[] = "#a35e4e";
 
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
     [SchemeSel] = {col_gray4, col_orange, col_orange},
-    [SchemeStatus] = {col_gray3, col_gray1, "#000000"},
-    [SchemeTagsSel] = {col_gray4, col_red_brown, "#000000"},
-    [SchemeTagsNorm] = {col_gray3, col_gray1, "#000000"},
-    [SchemeInfoSel] = {col_gray4, col_gray2, "#000000"},
-    [SchemeInfoNorm] = {col_gray3, col_gray1, "#000000"},
+    [SchemeStatus] = {col_gray3, col_gray1,
+                      "#000000"}, // Statusbar right {text,background,not used
+                                  // but cannot be empty}
+    [SchemeTagsSel] = {col_gray4, col_orange,
+                       "#000000"}, // Tagbar left selected {text,background,not
+                                   // used but cannot be empty}
+    [SchemeTagsNorm] =
+        {col_gray3, col_gray1,
+         "#000000"}, // Tagbar left unselected {text,background,not used but
+                     // cannot be empty}
+    [SchemeInfoSel] =
+        {col_gray4, col_gray2,
+         "#000000"}, // infobar middle  selected {text,background,not used but
+                     // cannot be empty}
+    [SchemeInfoNorm] =
+        {col_gray3, col_gray1,
+         "#000000"}, // infobar middle  unselected {text,background,not used but
+                     // cannot be empty}
+
 };
 
 /* tagging */
@@ -75,9 +89,10 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {
-    "dmenu_run", "-m",      dmenumon, "-fn",    dmenufont, "-nb",     col_gray1,
-    "-nf",       col_gray3, "-sb",    col_red_brown, "-sf",     col_gray4, NULL};
+static const char *dmenucmd[] = {"dmenu_run", "-m",  dmenumon,      "-fn",
+                                 dmenufont,   "-nb", col_gray1,     "-nf",
+                                 col_gray3,   "-sb", col_cyan, "-sf",
+                                 col_gray4,   NULL};
 static const char *termcmd[] = {"st", NULL};
 static const char *browsercmd[] = {"zen-browser", NULL};
 static const char *passcmd[] = {"passmenu", NULL};
