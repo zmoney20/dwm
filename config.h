@@ -94,7 +94,7 @@ static const char *dmenucmd[] = {"dmenu_run", "-m",  dmenumon,      "-fn",
                                  col_gray3,   "-sb", col_cyan, "-sf",
                                  col_gray4,   NULL};
 static const char *termcmd[] = {"st", NULL};
-static const char *browsercmd[] = {"zen-browser", NULL};
+static const char *browsercmd[] = {"brave", NULL};
 static const char *passcmd[] = {"passmenu", NULL};
 static const char *rofipasscmd[] = {"rofi-pass", NULL};
 /* dmenu_sys - view running processes and choose to kill a certain pid */
